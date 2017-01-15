@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-6 col-sm-6">
+    <%= raw "<img src='data:image/png;base64,#{@book.image}' class=\"book-image\">" %>
+  </div>
+  <div class="col-md-6 col-sm-6">
+    <h3><%= @book.name %></h3>
+    <h4 class="m-t-20">
+      <%= link_to(@book.author.name, @book.author, class: 'block') %>
+    </h4>
+    <div class="book-price m-t-20">
+      <%= @book.price %> €
+    </div>
+    <button type="button" class="btn btn-default navbar-btn m-t-20">
+      Add to Cart
+    </button>
+  </div>
+</div>

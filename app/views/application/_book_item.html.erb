@@ -1,0 +1,13 @@
+<ul class="thumbnail-list">
+  <% books.each do |book| %>
+    <li>
+      <a href="<%= book_path(book) %>">
+        <%= raw "<img src='data:image/png;base64,#{book.cover}' class=\"book-image\">" %>
+      </a>
+      <%= link_to(book.name, book, class: 'block book-title', title: book.name) %>
+      <%= link_to(book.author.name, book.author, class: 'block') %>
+      <div class="book-price"><%= book.price %> €</div>
+      <a type="button" class="btn btn-default navbar-btn" href="<%= add_to_cart_path(book) %>">Add to Cart</a>
+    </li>
+  <% end %>
+</ul>

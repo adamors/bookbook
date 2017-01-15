@@ -2,13 +2,21 @@
 <html>
   <head>
     <title>Bookbook</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <%= render 'header' %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2 col-md-2">
+          <%= render 'sidebar', categories: @categories %>
+        </div>
+        <div class="col-sm-9 col-md-9">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

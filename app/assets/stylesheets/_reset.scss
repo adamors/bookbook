@@ -1,0 +1,29 @@
+h3 {
+  color: $color-primary-4;
+}
+a {
+  color: $color-complement-3!important;
+  text-decoration: none;
+}
+
+.btn-default {
+  background-color: $color-complement-3;
+  color: white!important;
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:hover,
+  &:active:focus,
+  &.active {
+    background-color: $color-complement-1;
+    color: gray!important;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.no-color {
+  color: inherit!important;
+}

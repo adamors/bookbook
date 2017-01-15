@@ -1,0 +1,36 @@
+.navbar-brand {
+  img {
+    display: inline-block;
+  }
+  span {
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: super;
+    margin-left: 10px;
+  }
+}
+
+img#logo {
+  max-width: 53px;
+  margin-top: -16px;
+}
+
+.navbar-nav {
+  .input-group {
+    margin-top: 7px;
+  }
+}
+
+.list-group-item.active,
+.list-group-item:hover {
+  border-left: 3px solid $color-primary-0;
+  background-color: $color-light-gray;
+}
+
+.navbar-default {
+  background-color: $color-primary-0;
+  border-color: $color-primary-4;
+  a {
+    color: $color-complement-1!important;
+  }
+}

@@ -1,0 +1,28 @@
+<% if @books.empty? %>
+<h3>Your cart is empty.</h3>
+<% else%>
+<h3>Your cart contains <%= @books.count %> items: </h3>
+
+<table class="table">
+  <tr>
+    <td>#</td>
+    <td>Name</td>
+    <td>Quantity</td>
+    <td>Price</td>
+    <td>Total</td>
+  </tr>
+  <% @books.each_with_index do |book, index| %>
+  <tr>
+    <td><%= index + 1 %></td>
+    <td><%= book.name %></td>
+    <td><%= @cart[book.id.to_s] %></td>
+    <td><%= book.price %>€</td>
+    <td><%= @cart[book.id.to_s] * book.price %>€</td>
+  </tr>
+  <% end %>
+  <tr>
+    <td colspan="4" class="text-right"><strong>Total</strong></td>
+    <td colspan="1"><%= @cart_total %>€</td>
+  </tr>
+</ul>
+<% end %>

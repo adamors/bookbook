@@ -1,0 +1,6 @@
+<h3>Books of <%= @author.name %></h3>
+<% if @books.empty? %>
+  Could not find any books.
+<% else %>
+<%= render 'book_item', books: @books %>
+<% end %>

@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2 col-sm-2">
+        <ul class="nav navbar-nav">
+          <li>
+            <a class="navbar-brand" href="<%= root_url %>">
+              <%= image_tag 'logo.png', id: 'logo' %>
+              <span>book book</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1">
+        <ul class="nav navbar-nav">
+          <li>
+            <div class="input-group">
+              <input type="hidden" name="search_param" value="all" id="search_param">
+              <input type="text" class="form-control" name="x" placeholder="Search">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-1 col-md-offset-2 col-sm-1 col-sm-offset-2">
+        <ul class="nav navbar-nav">
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
